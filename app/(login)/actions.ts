@@ -16,7 +16,7 @@ import {
   ActivityType,
   invitations
 } from '@/lib/db/schema';
-import { hashPassword } from '@/lib/auth/session';
+import { hashPassword, comparePasswords } from '@/lib/auth/session';
 import { signIn as nextAuthSignIn, signOut as nextAuthSignOut, auth } from '@/lib/auth';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
@@ -719,15 +719,15 @@ export const inviteOrganisationMember = validatedActionWithUser(
     // Send invitation email
     let emailSent = false;
     let emailError: string | null = null;
-    
+
     try {
       const { sendInvitationEmail, isEmailEnabled } = await import('@/lib/email/resend');
       const emailEnabled = await isEmailEnabled();
-      
+
       console.log('Email enabled check:', emailEnabled);
       console.log('RESEND_ENABLED:', process.env.RESEND_ENABLED);
       console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
-      
+
       if (emailEnabled) {
         console.log('Attempting to send invitation email to:', email);
         emailSent = await sendInvitationEmail(
@@ -737,9 +737,9 @@ export const inviteOrganisationMember = validatedActionWithUser(
           createdInvitation.id,
           user.name || undefined
         );
-        
+
         console.log('Email send result:', emailSent);
-        
+
         if (!emailSent) {
           emailError = 'Email sending failed. Please verify RESEND_API_KEY and RESEND_ENABLED settings.';
           console.error('Failed to send invitation email. Check Resend configuration.');
@@ -761,7 +761,7 @@ export const inviteOrganisationMember = validatedActionWithUser(
     if (emailSent) {
       return { success: 'Invitation sent successfully' };
     } else {
-      return { 
+      return {
         success: `Invitation created successfully. ${emailError || 'Email could not be sent.'}`
       };
     }

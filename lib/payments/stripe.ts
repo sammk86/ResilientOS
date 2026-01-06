@@ -16,7 +16,7 @@ export function isStripeEnabled(): boolean {
   return stripeEnabled && !!stripeSecretKey;
 }
 
-function getStripeClient(): Stripe {
+export function getStripeClient(): Stripe {
   if (!isStripeEnabled()) {
     throw new Error('Stripe is not enabled. Please set STRIPE_ENABLED=true and STRIPE_SECRET_KEY in your environment variables.');
   }
