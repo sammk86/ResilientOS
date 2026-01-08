@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { db } from './drizzle';
-import { controls, policy_controls } from './schema';
+import { controls, policyControls } from './schema';
 
 import { sql } from 'drizzle-orm';
 

@@ -173,9 +173,9 @@ async function seed() {
     // 1. Ensure Framework exists
     let frameworkId: number;
     const existingFramework = await db.query.frameworks.findFirst({
-        where: (f, { eq, and }) => and(
-            eq(f.name, 'ISO 22301'),
-            eq(f.organisationId, orgId)
+        where: and(
+            eq(frameworks.name, 'ISO 22301'),
+            eq(frameworks.organisationId, orgId)
         )
     });
 
@@ -197,9 +197,9 @@ async function seed() {
 
     // 2. Grant Access
     const existingAccess = await db.query.userFrameworkAccess.findFirst({
-        where: (access, { eq, and }) => and(
-            eq(access.userId, userId),
-            eq(access.frameworkId, frameworkId)
+        where: and(
+            eq(userFrameworkAccess.userId, userId),
+            eq(userFrameworkAccess.frameworkId, frameworkId)
         )
     });
 
@@ -218,9 +218,9 @@ async function seed() {
     for (const d of isoDomains) {
         let domainId: number;
         const existingDomain = await db.query.domains.findFirst({
-            where: (domain, { eq, and }) => and(
-                eq(domain.name, d.name),
-                eq(domain.frameworkId, frameworkId)
+            where: and(
+                eq(domains.name, d.name),
+                eq(domains.frameworkId, frameworkId)
             )
         });
 
@@ -245,9 +245,9 @@ async function seed() {
 
         // Find existing control
         const existingControl = await db.query.controls.findFirst({
-            where: (control, { eq, and }) => and(
-                eq(control.code, c.code),
-                eq(control.frameworkId, frameworkId)
+            where: and(
+                eq(controls.code, c.code),
+                eq(controls.frameworkId, frameworkId)
             )
         });
 

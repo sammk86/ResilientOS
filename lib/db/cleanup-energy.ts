@@ -14,7 +14,7 @@ async function cleanup() {
         ])
     });
 
-    const rbIds = demoRunbooks.map(rb => rb.id);
+    const rbIds = demoRunbooks.map((rb: any) => rb.id);
     if (rbIds.length > 0) {
         await db.delete(runbookSteps).where(inArray(runbookSteps.runbookId, rbIds));
         await db.delete(runbooks).where(inArray(runbooks.id, rbIds));

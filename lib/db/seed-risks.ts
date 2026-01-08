@@ -26,9 +26,9 @@ async function seedRisks() {
 
     for (const cat of categories) {
         const existing = await db.query.riskCategories.findFirst({
-            where: (c, { eq, and }) => and(
-                eq(c.name, cat.name),
-                eq(c.organisationId, orgId)
+            where: and(
+                eq(riskCategories.name, cat.name),
+                eq(riskCategories.organisationId, orgId)
             )
         });
 
