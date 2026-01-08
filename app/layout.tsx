@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import { getUser, getOrganisationForUser } from '@/lib/db/queries';
 import { SWRConfig } from 'swr';
+import { Toaster } from 'sonner';
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: 'Next.js SaaS Starter',
@@ -23,9 +25,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${manrope.className}`}
+      className={`${manrope.className}`}
+      suppressHydrationWarning
     >
-      <body className="min-h-[100dvh] bg-gray-50" suppressHydrationWarning>
+      <body className="min-h-[100dvh] bg-background text-foreground antialiased">
         <SWRConfig
           value={{
             fallback: {
@@ -36,7 +39,15 @@ export default function RootLayout({
             }
           }}
         >
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+            <Toaster position="top-right" />
+          </ThemeProvider>
         </SWRConfig>
       </body>
     </html>

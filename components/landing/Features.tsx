@@ -59,7 +59,7 @@ export function Features() {
     ];
 
     return (
-        <section ref={container} className="py-24 bg-gray-50 dark:bg-gray-900/30">
+        <section ref={container} className="py-24 bg-transparent">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">Powered by an Advanced Core</h2>
@@ -68,7 +68,7 @@ export function Features() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {features.map((f, i) => (
-                        <div key={i} className="feature-card bg-background p-8 rounded-2xl border border-border/50 hover:border-blue-500/50 transition-colors group">
+                        <div key={i} className="feature-card bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-colors group">
                             <div className={`w-14 h-14 rounded-xl ${f.bg} ${f.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                                 {f.icon}
                             </div>

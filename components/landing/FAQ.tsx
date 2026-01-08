@@ -32,10 +32,10 @@ export function FAQ() {
 
             <div className="space-y-4">
                 {faqs.map((faq, i) => (
-                    <div key={i} className="border border-border rounded-xl overflow-hidden bg-background">
+                    <div key={i} className="border border-white/10 rounded-xl overflow-hidden bg-white/5 backdrop-blur-sm">
                         <button
                             onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                            className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors"
+                            className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
                         >
                             <span className="text-lg font-semibold pr-8">{faq.q}</span>
                             {openIndex === i ? <Minus className="w-5 h-5 flex-shrink-0 text-blue-500" /> : <Plus className="w-5 h-5 flex-shrink-0" />}

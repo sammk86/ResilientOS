@@ -3,11 +3,10 @@ import { Github, Twitter, Linkedin } from 'lucide-react';
 
 export function Footer() {
     return (
-        <footer className="bg-background border-t border-border py-12 px-6">
+        <footer className="bg-transparent border-t border-white/10 py-12 px-6">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex items-center gap-2 font-bold text-xl">
-                    <div className="w-8 h-8 bg-gray-800 dark:bg-gray-700 rounded-lg flex items-center justify-center text-white text-sm">R</div>
-                    <span>ResilientOS</span>
+                    <img src="/logo.png" alt="ResilientOS" className="h-10 w-auto invert hue-rotate-180 rounded-lg mix-blend-screen" />
                 </div>
 
                 <div className="flex items-center gap-8 text-sm text-muted-foreground">

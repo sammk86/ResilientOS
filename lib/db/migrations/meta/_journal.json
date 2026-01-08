@@ -8,6 +8,48 @@
       "when": 1767082137175,
       "tag": "0000_burly_iron_lad",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1767721606715,
+      "tag": "0001_hesitant_greymalkin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1767767478703,
+      "tag": "0002_chilly_ma_gnuci",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1767792720650,
+      "tag": "0003_cloudy_grandmaster",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1767812030401,
+      "tag": "0004_many_guardian",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1767858256523,
+      "tag": "0005_friendly_patriot",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1767869241684,
+      "tag": "0006_robust_randall_flagg",
+      "breakpoints": true
     }
   ]
 }

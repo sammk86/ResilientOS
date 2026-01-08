@@ -45,7 +45,7 @@ export function SocialProof() {
     ];
 
     return (
-        <section ref={container} className="py-20 bg-background overflow-hidden">
+        <section ref={container} className="py-20 bg-transparent overflow-hidden">
             {/* Logo Marquee */}
             <div className="mb-32 relative">
                 <p className="text-center text-sm font-semibold text-muted-foreground mb-8 uppercase tracking-widest">Trusted for Governance & Compliance</p>
@@ -59,8 +59,8 @@ export function SocialProof() {
                         ))}
                     </div>
                 </div>
-                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10" />
+                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-900 to-transparent z-10" />
             </div>
 
             {/* Deep Social Proof */}
@@ -74,7 +74,7 @@ export function SocialProof() {
                         </div>
                     </div>
                     {/* Trust Badges Overlay */}
-                    <div className="absolute -bottom-6 -right-6 bg-background border border-border p-4 rounded-xl shadow-xl flex gap-4">
+                    <div className="absolute -bottom-6 -right-6 bg-slate-900/90 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl flex gap-4">
                         {['ISO 22301', 'SOC 2', 'NIST'].map(badge => (
                             <div key={badge} className="px-2 py-1 bg-green-500/10 text-green-600 text-xs font-bold rounded border border-green-500/20">
                                 {badge}

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import OrganisationPageClient from '../organisation/organisation-page-client';
+import OrganisationPageClient from '../dashboard/organisation/organisation-page-client';
 import { Loader2 } from 'lucide-react';
 
 export default function OrganisationTab() {

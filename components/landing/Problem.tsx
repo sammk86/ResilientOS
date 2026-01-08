@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
 
 export function Problem() {
     const container = useRef(null);
-    const cardsRef = useRef([]);
+    const cardsRef = useRef<HTMLDivElement[]>([]);
 
     useGSAP(() => {
         // Stagger cards in
@@ -51,7 +51,7 @@ export function Problem() {
     ];
 
     return (
-        <section ref={container} className="relative py-24 bg-gray-50 dark:bg-gray-900/50">
+        <section ref={container} className="relative py-24 bg-transparent">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -67,7 +67,7 @@ export function Problem() {
                         <div
                             key={i}
                             ref={el => { if (el) cardsRef.current[i] = el; }}
-                            className="bg-background border border-border/50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
                         >
                             <div className="mb-6 bg-orange-500/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                 {card.icon}

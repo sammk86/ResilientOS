@@ -28,15 +28,15 @@ export function Hero() {
     return (
         <section ref={container} className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
             {/* Background Gradients */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-500/20 rounded-full blur-[120px] -z-10" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-orange-500/20 rounded-full blur-[120px] -z-10" />
 
             <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
 
                 {/* Badge */}
-                <div className="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 font-medium text-sm mb-8">
+                <div className="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-600 dark:text-orange-400 font-medium text-sm mb-8">
                     <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                     </span>
                     The Intelligent Core for ISO 22301
                 </div>
@@ -44,7 +44,7 @@ export function Hero() {
                 {/* Headline */}
                 <h1 className="hero-text text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-5xl">
                     From Static Documents to a <br className="hidden md:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-red-600">
                         Dynamic Resilience System
                     </span>
                 </h1>
@@ -58,7 +58,7 @@ export function Hero() {
                 {/* CTA */}
                 <div className="hero-cta flex flex-col md:flex-row items-center gap-4">
                     <Link href="/sign-up">
-                        <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-semibold shadow-lg shadow-blue-500/25 transition-all text-lg flex items-center gap-2">
+                        <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white rounded-xl font-semibold shadow-lg shadow-orange-500/25 transition-all text-lg flex items-center gap-2">
                             Start Your Transformation
                             <ArrowRight className="w-5 h-5" />
                         </button>
@@ -91,10 +91,10 @@ export function Hero() {
 
                             {/* Central Node */}
                             <div className="relative z-10 flex flex-col items-center">
-                                <div className="w-32 h-32 rounded-full border-2 border-blue-500 bg-blue-900/20 flex items-center justify-center shadow-[0_0_50px_rgba(59,130,246,0.3)] animate-pulse">
-                                    <Shield className="w-16 h-16 text-blue-400" />
+                                <div className="w-32 h-32 rounded-full border-2 border-orange-500 bg-orange-900/20 flex items-center justify-center shadow-[0_0_50px_rgba(249,115,22,0.3)] animate-pulse">
+                                    <Shield className="w-16 h-16 text-orange-400" />
                                 </div>
-                                <div className="mt-4 text-blue-400 font-bold tracking-widest text-sm">RESILIENTOS CORE</div>
+                                <div className="mt-4 text-orange-400 font-bold tracking-widest text-sm">RESILIENTOS CORE</div>
                             </div>
 
                             {/* Connected Nodes */}
@@ -132,7 +132,7 @@ export function Hero() {
                     </div>
 
                     {/* Reflection */}
-                    <div className="absolute -bottom-4 left-4 right-4 h-4 bg-blue-500/20 blur-xl rounded-[100%]" />
+                    <div className="absolute -bottom-4 left-4 right-4 h-4 bg-orange-500/20 blur-xl rounded-[100%]" />
                 </div>
             </div>
         </section>

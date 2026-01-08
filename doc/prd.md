@@ -23,10 +23,11 @@ Today's BCMS is a "Paper Tiger." Essential pillars—Governance, Risk, BIA, Stra
 
 #### 2. Dynamic Risk Assessment
 *   **Objective:** Move from static "Risk Registers" to continuous risk monitoring.
-*   **Feature:** **Heat Map Engine**
-    *   Interactive, drag-and-drop Risk Heat Maps.
-    *   **Contextual Risks:** Link specific threats (e.g., "Ransomware") to specific assets or business functions.
-    *   **Automated Scoring:** Dynamic calculation of Inherent vs. Residual risk based on implemented controls.
+*   **Feature:** **Risk Universe & Register**
+    *   **Risk Universe:** A comprehensive library of potential risks based on industry frameworks (ISO, NIST), standardized for consistent selection.
+    *   **Live Risk Register:** Active tracking of material risks with CRUD capabilities (Create, Edit, Delete).
+    *   **Heat Map Engine:** Interactive, drag-and-drop Risk Heat Maps for visualizing Likelihood vs Impact.
+    *   **Automated Scoring:** Dynamic calculation of Inherent vs. Residual risk based on strategies (Mitigate, Transfer, Accept, Avoid).
 
 #### 3. Energized Business Impact Analysis (BIA)
 *   **Objective:** Transform BIA from a "once-a-year survey" into a data-driven dependency map.

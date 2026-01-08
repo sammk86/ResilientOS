@@ -10,7 +10,7 @@ import { Footer } from '@/components/landing/Footer';
 
 export default function LandingPage() {
     return (
-        <main className="min-h-screen bg-background text-foreground font-sans selection:bg-blue-500/30">
+        <main className="dark min-h-screen bg-slate-950 bg-gradient-to-b from-slate-900 via-gray-900 to-black text-white selection:bg-orange-500/30">
             <Navbar />
             <Hero />
             <Problem />

@@ -39,7 +39,7 @@ export function Solution() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16 space-y-4 solution-header">
                     <h2 className="text-3xl md:text-5xl font-bold">
-                        The <span className="text-blue-600">Central Nervous System</span> for Resilience.
+                        The <span className="text-orange-500">Central Nervous System</span> for Resilience.
                     </h2>
                     <p className="text-xl text-muted-foreground">
                         Transform disparate documents into a live, integrated framework.
@@ -48,7 +48,7 @@ export function Solution() {
 
                 {/* Interactive Slider */}
                 <div
-                    className="relative h-[600px] w-full rounded-2xl overflow-hidden border border-border shadow-2xl cursor-col-resize select-none"
+                    className="relative h-[600px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl cursor-col-resize select-none"
                     onMouseMove={handleMouseMove}
                     onMouseDown={handleMouseDown}
                     onMouseUp={handleMouseUp}
@@ -61,17 +61,17 @@ export function Solution() {
                     }}
                 >
                     {/* RIGHT SIDE (NEW WAY - ResilientOS) */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-gray-900 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center">
                         <div className="grid grid-cols-2 gap-12 max-w-4xl p-12 w-full h-full pt-32">
                             <div className="space-y-8">
-                                <div className="bg-blue-500/10 p-6 rounded-xl border border-blue-500/20">
-                                    <h3 className="text-2xl font-bold text-blue-400 mb-2 flex items-center gap-2">
+                                <div className="bg-orange-500/10 p-6 rounded-xl border border-orange-500/20">
+                                    <h3 className="text-2xl font-bold text-orange-400 mb-2 flex items-center gap-2">
                                         <LayoutDashboard className="w-6 h-6" /> Dynamic View
                                     </h3>
                                     <p className="text-gray-300">Live integrated framework where policies map to controls.</p>
                                 </div>
-                                <div className="bg-blue-500/10 p-6 rounded-xl border border-blue-500/20">
-                                    <h3 className="text-2xl font-bold text-blue-400 mb-2 flex items-center gap-2">
+                                <div className="bg-orange-500/10 p-6 rounded-xl border border-orange-500/20">
+                                    <h3 className="text-2xl font-bold text-orange-400 mb-2 flex items-center gap-2">
                                         <Network className="w-6 h-6" /> Interconnected
                                     </h3>
                                     <p className="text-gray-300">BIA data directly updates Plans. Standards inherit controls.</p>
@@ -80,47 +80,47 @@ export function Solution() {
                             <div className="relative">
                                 {/* Abstract node visualization */}
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-64 h-64 border-2 border-blue-500/50 rounded-full animate-[spin_10s_linear_infinite]" />
+                                    <div className="w-64 h-64 border-2 border-orange-500/50 rounded-full animate-[spin_10s_linear_infinite]" />
                                     <div className="absolute w-4 h-4 bg-white rounded-full shadow-[0_0_20px_white]" />
-                                    <div className="absolute top-10 left-10 text-blue-300 text-xs text-center backdrop-blur-sm bg-blue-900/30 p-2 rounded">Use AI to<br />Query Plans</div>
+                                    <div className="absolute top-10 left-10 text-orange-300 text-xs text-center backdrop-blur-sm bg-orange-900/30 p-2 rounded">Use AI to<br />Query Plans</div>
                                 </div>
                             </div>
                         </div>
                         <div className="absolute bottom-10 right-10 text-right">
                             <h4 className="text-3xl font-bold text-white">ResilientOS</h4>
-                            <p className="text-blue-400">Orchestrated & Dynamic</p>
+                            <p className="text-orange-400">Orchestrated & Dynamic</p>
                         </div>
                     </div>
 
                     {/* LEFT SIDE (OLD WAY) - clipped */}
                     <div
-                        className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center border-r-4 border-white"
+                        className="absolute inset-0 bg-gray-100 flex items-center justify-center border-r-4 border-white"
                         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
                     >
                         <div className="grid grid-cols-2 gap-12 max-w-4xl p-12 w-full h-full pt-32 opacity-60 grayscale">
                             <div className="space-y-8">
-                                <div className="bg-gray-200 dark:bg-gray-700 p-6 rounded-xl border border-gray-300 dark:border-gray-600">
-                                    <h3 className="text-2xl font-bold text-gray-600 dark:text-gray-400 mb-2 flex items-center gap-2">
+                                <div className="bg-white p-6 rounded-xl border border-gray-300 shadow-sm">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
                                         <FileText className="w-6 h-6" /> Static Docs
                                     </h3>
-                                    <p className="text-gray-500 dark:text-gray-300">100-page PDFs on a shared drive. Impossible to use in a crisis.</p>
+                                    <p className="text-gray-600">100-page PDFs on a shared drive. Impossible to use in a crisis.</p>
                                 </div>
-                                <div className="bg-gray-200 dark:bg-gray-700 p-6 rounded-xl border border-gray-300 dark:border-gray-600">
-                                    <h3 className="text-2xl font-bold text-gray-600 dark:text-gray-400 mb-2 flex items-center gap-2">
+                                <div className="bg-white p-6 rounded-xl border border-gray-300 shadow-sm">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
                                         <Database className="w-6 h-6" /> Fragmented
                                     </h3>
-                                    <p className="text-gray-500 dark:text-gray-300">Spreadsheets, emails, and disconnected tools.</p>
+                                    <p className="text-gray-600">Spreadsheets, emails, and disconnected tools.</p>
                                 </div>
                             </div>
                             <div className="relative flex items-center justify-center">
-                                <div className="w-48 h-32 bg-gray-300 dark:bg-gray-600 rounded flex items-center justify-center border-2 border-dashed border-gray-400">
-                                    <span className="text-sm font-mono p-4">Policy_FINAL_v2_2023.pdf</span>
+                                <div className="w-48 h-32 bg-gray-200 rounded flex items-center justify-center border-2 border-dashed border-gray-400">
+                                    <span className="text-sm font-mono p-4 text-gray-600">Policy_FINAL_v2_2023.pdf</span>
                                 </div>
                             </div>
                         </div>
                         <div className="absolute bottom-10 left-10">
-                            <h4 className="text-3xl font-bold text-gray-800 dark:text-white">The Old Way</h4>
-                            <p className="text-gray-500">Static & Siloed</p>
+                            <h4 className="text-3xl font-bold text-gray-900">The Old Way</h4>
+                            <p className="text-gray-600">Static & Siloed</p>
                         </div>
                     </div>
 
