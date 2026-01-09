@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Logo } from '@/components/Logo';
 
 export function Footer() {
     return (
         <footer className="bg-transparent border-t border-white/10 py-12 px-6">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex items-center gap-2 font-bold text-xl">
-                    <img src="/logo.png" alt="ResilientOS" className="h-10 w-auto invert hue-rotate-180 rounded-lg mix-blend-screen" />
+                    <Logo className="h-10" />
                 </div>
 
                 <div className="flex items-center gap-8 text-sm text-muted-foreground">

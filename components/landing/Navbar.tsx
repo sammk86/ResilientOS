@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button'; // Assuming shadcn button exists or I will use standard button
 import { ArrowRight } from 'lucide-react';
+import { Logo } from '@/components/Logo';
 
 export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-slate-900/50 backdrop-blur-md border-b border-white/10">
       <div className="flex items-center gap-2">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-          <img src="/logo.png" alt="ResilientOS" className="h-10 w-auto invert hue-rotate-180 rounded-lg mix-blend-screen" />
+          <Logo className="h-10" />
         </Link>
       </div>
 

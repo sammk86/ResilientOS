@@ -14,12 +14,14 @@ interface StatCardProps {
 
 export function StatCard({ title, value, description, icon: Icon, trend }: StatCardProps) {
     return (
-        <Card>
+        <Card className="group">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">
                     {title}
                 </CardTitle>
-                <Icon className="h-4 w-4 text-muted-foreground" />
+                <div className="bg-orange-500/10 p-2 rounded-lg group-hover:bg-orange-500/20 transition-colors">
+                    <Icon className="h-4 w-4 text-orange-600 dark:text-orange-400" />
+                </div>
             </CardHeader>
             <CardContent>
                 <div className="text-2xl font-bold">{value}</div>

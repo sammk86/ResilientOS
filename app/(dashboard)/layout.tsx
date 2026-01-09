@@ -97,7 +97,7 @@ function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-col h-full bg-secondary/30 border-r border-border w-64 hidden md:flex shrink-0">
+    <div className="flex flex-col h-full bg-secondary/30 border-r border-orange-500/20 w-64 hidden md:flex shrink-0">
 
 
       {/* Nav */}
@@ -112,11 +112,11 @@ function Sidebar() {
               className={cn(
                 "flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
                 isActive
-                  ? "bg-background text-primary shadow-sm border border-border"
-                  : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                  ? "bg-orange-500/10 text-orange-600 dark:text-orange-400 shadow-sm border border-orange-500/20"
+                  : "text-muted-foreground hover:bg-orange-500/5 hover:text-foreground hover:border-orange-500/10"
               )}
             >
-              <Icon className={cn("mr-3 h-5 w-5", isActive ? "text-primary" : "text-muted-foreground")} />
+              <Icon className={cn("mr-3 h-5 w-5", isActive ? "text-orange-600 dark:text-orange-400" : "text-muted-foreground")} />
               {item.name}
             </Link>
           )
@@ -130,9 +130,9 @@ function Sidebar() {
 
 function MobileHeader() {
   return (
-    <header className="md:hidden border-b bg-card p-4 flex items-center justify-between">
+    <header className="md:hidden border-b border-orange-500/20 bg-card p-4 flex items-center justify-between">
       <Link href="/" className="flex items-center">
-        <img src="/logo.png" alt="ResilientOS" className="h-10 w-auto dark:invert dark:hue-rotate-180" />
+        <Logo className="h-10" />
       </Link>
       {/* Simple Mobile Menu Fallback since Sheet isn't fully implemented/imported with shadcn pattern here yet */}
       <DropdownMenu>
@@ -160,15 +160,16 @@ function MobileHeader() {
 }
 
 import { ModeToggle } from '@/components/theme-toggle';
+import { Logo } from '@/components/Logo';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col h-screen bg-background">
       {/* NEW PORTAL HEADER (Full Width) */}
-      <header className="hidden md:flex items-center justify-between p-4 border-b bg-card z-10 shrink-0">
+      <header className="hidden md:flex items-center justify-between p-4 border-b border-orange-500/20 bg-card z-10 shrink-0">
         {/* LEFT: Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="ResilientOS" className="h-10 w-auto dark:invert dark:hue-rotate-180" />
+          <Logo className="h-10" />
         </Link>
 
         {/* RIGHT: User Icon & Theme Toggle */}

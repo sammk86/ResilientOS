@@ -48,7 +48,7 @@ export function RecentActivityWidget({ activities }: RecentActivityWidgetProps) 
                         {activities.map((item, index) => (
                             <div key={`${item.type}-${item.id}-${index}`} className="flex items-center justify-between border-b pb-2 last:border-0 last:pb-0">
                                 <div className="flex items-center space-x-3">
-                                    <div className="p-2 bg-gray-50 rounded-full">
+                                    <div className="p-2 bg-orange-500/10 rounded-full border border-orange-500/20">
                                         {getIcon(item.type)}
                                     </div>
                                     <div className="space-y-0.5">

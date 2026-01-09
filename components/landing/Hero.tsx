@@ -59,7 +59,7 @@ export function Hero() {
                 <div className="hero-cta flex flex-col md:flex-row items-center gap-4">
                     <Link href="/sign-up">
                         <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white rounded-xl font-semibold shadow-lg shadow-orange-500/25 transition-all text-lg flex items-center gap-2">
-                            Start Your Transformation
+                            Book a Demo
                             <ArrowRight className="w-5 h-5" />
                         </button>
                     </Link>
